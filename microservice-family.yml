@@ -1,10 +1,1 @@
-spring:
-  data:
-    mongodb:
-      uri: mongodb://localhost:27017/familydb
-      
-server:
-   port: 8082
-   
-configuracion:
-   texto: Configurando Ambiente Desarrollo
+spring:  data:    mongodb:      uri: mongodb://localhost:27017/familydb      server:   port: 8082   configuration:   text: Setting up Development Environment
