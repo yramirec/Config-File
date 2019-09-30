@@ -1,0 +1,30 @@
+server:
+   port: 8099
+   
+eureka:
+  client:
+    #registerWithEureka: false    
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
+      
+zuul:
+  host:
+    connect-timeout-millis: 20000
+    socket-timeout-millis: 20000
+  routes:
+    a:      
+      path: /microservice-student/**
+      sensitiveHeaders:
+      url: http://localhost:8081
+    b:
+      path: /microservice-family/**
+      sensitiveHeaders:
+      url: http://localhost:8082  
+    c:      
+      path: /microservice-teacher/**
+      sensitiveHeaders:
+      url: http://localhost:8083
+    d:
+      path: /microservice-course/**
+      sensitiveHeaders:
+      url: http://localhost:8084
